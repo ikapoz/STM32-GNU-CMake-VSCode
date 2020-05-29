@@ -10,6 +10,12 @@ It is basic template generated from STM32CubeMX for STM32F103.
 Requirements
 ============
 
+    - `STM32Cube Programmer`_
+    - `ST-Link Server`_
+    - `CMake`_
+    - `Make`_
+    - `GNU ARM toolchain`_
+
 .. _`STM32Cube Programmer`: https://www.st.com/en/development-tools/stm32cubeprog.html
 .. _`ST-Link Server`: https://my.st.com/content/my_st_com/en/products/development-tools/software-development-tools/stm32-software-development-tools/stm32-performance-and-debuggers/st-link-server.html
 .. _`CMake`: https://cmake.org/download
@@ -29,11 +35,11 @@ stm32-utils folder structure:
         - st-link
 
 
-For `STM32Cube Programmer`_ copy everything from install dir to stm32-tools
-For `ST-Link Server`_ copy everything from bin folder to st-link
-For `CMake`_ copy everything to cmake
-For `Make`_ copy make.exe to stm32-tools folder
-For `GNU ARM toolchain`_ copy everything to gcc 
+* For `STM32Cube Programmer`_ copy everything from install dir to stm32-tools
+* For `ST-Link Server`_ copy everything from bin folder to st-link
+* For `CMake`_ copy everything to cmake
+* For `Make`_ copy make.exe to stm32-tools folder
+* For `GNU ARM toolchain`_ copy everything to gcc 
 
 
 Usage
