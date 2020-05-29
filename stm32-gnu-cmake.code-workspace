@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cortex-debug.armToolchainPath": "${workspaceFolder}/../stm32-utils/",
+		"cortex-debug.openocdPath": "${workspaceFolder}/../stm32-utils/openocd/bin/openocd.exe",
+		"C_Cpp.clang_format_fallbackStyle": "LLVM",
+		"cmake.cmakePath": "Z:\\embedded_development\\stm32-utils\\cmake\\bin\\cmake.exe",
+		"cmake.generator": "Unix Makefiles",
+		"cmake.parallelJobs": 4,
+		"cmake.configureSettings": {
+			"CMAKE_MAKE_PROGRAM": "Z:\\embedded_development\\stm32-utils"
+		}
+	},
+}

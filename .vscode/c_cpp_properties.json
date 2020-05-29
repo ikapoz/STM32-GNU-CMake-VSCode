@@ -1,0 +1,44 @@
+{
+    "env": {
+        "gccIncludePath": "${workspaceFolder}/../stm32-utils/gcc/lib/gcc/arm-none-eabi/9.2.1/include/**",
+        "cubemx_includes": [
+            "Drivers/CMSIS/Device/ST/STM32F1xx/Include/",
+            "Drivers/CMSIS/Include/",
+            "Inc",
+            "Drivers/STM32F1xx_HAL_Driver/Inc",
+            "Drivers/**"
+        ],
+        "cubemx_defines": [
+            "USE_FULL_LL_DRIVER",
+            "STM32F103xB"
+        ]
+    },
+    "configurations": [
+        {
+            "name": "STM32F103 DEBUG",
+            "intelliSenseMode": "gcc-arm",
+            "includePath": [
+                "${gccIncludePath}",
+                "${cubemx_includes}",
+                "${workspaceFolder}/**"
+            ],
+            "browse": {
+                "path": [
+                    "${gccIncludePath}",
+                    "${cubemx_includes}",
+                    "${workspaceFolder}/**"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "defines": [
+                "DEBUG",
+                "${cubemx_defines}"
+            ],
+            "cppStandard": "gnu++20",
+            "cStandard": "c11",
+            "compilerPath": "${workspaceFolder}/../stm32-utils/gcc/bin/arm-none-eabi-gcc.exe",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
+}

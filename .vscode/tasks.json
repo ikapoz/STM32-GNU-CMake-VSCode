@@ -1,0 +1,106 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build Debug",
+            "command": "",
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "-ExecutionPolicy",
+                    "Unrestricted",
+                    "-NoProfile",
+                    "-File",
+                    "${workspaceFolder}\\scripts\\cmake-debug.ps1"
+                ]
+            },
+            "linux":{
+                "command": "./scripts/make-debug.sh"
+            },
+            "type": "process",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "Build Release",
+            "type": "process",
+            "command": "",
+            "windows":{
+                "command": "powershell",
+                "args": [
+                    "-ExecutionPolicy",
+                    "Unrestricted",
+                    "-NoProfile",
+                    "-File",
+                    "${cwd}\\scripts\\cmake-release.ps1"
+                ]
+            },
+            "linux":{
+                "command": "./scripts/make-release.sh"
+            },
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Build Debug and start GDB server",
+            "command": "",
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "-ExecutionPolicy",
+                    "Unrestricted",
+                    "-NoProfile",
+                    "-File",
+                    "${workspaceFolder}\\scripts\\gdb-server.ps1"
+                ]
+            },
+            "linux":{
+                "command": "./start-gdb-server.sh"
+            },
+            "type": "process",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        },
+        {
+            "label": "Build One File",
+            "type": "shell",
+            "command": "/home/dev/gcc/bin/arm-none-eabi-g++ -g main.cpp -o main.out",
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        },
+        {
+            "label": "st-util",
+            "isBackground": true,
+            "type": "process",
+            "command": "${workspaceFolder}/../stm32-utils/st-link/st-util.exe",
+            "dependsOn": "Build Debug"
+        },
+        {
+            "label": "Clean build",
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "-ExecutionPolicy",
+                    "Unrestricted",
+                    "-NoProfile",
+                    "-File",
+                    "${workspaceFolder}\\clean-project.ps1"
+                ]
+            },
+            "type": "process",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            }
+        }
+    ]
+}

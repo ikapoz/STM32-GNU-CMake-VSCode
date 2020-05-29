@@ -1,0 +1,10 @@
+[
+    {
+        "name": "GNU ARM",
+        "compilers": {
+            "CC": "${workspaceFolder}/../stm32-utils/gcc/bin/arm-none-eabi-gcc.exe",
+            "CCX": "${workspaceFolder}/../stm32-utils/gcc/bin/arm-none-eabi-g++.exe"
+        },
+        "toolchainFile": "${workspaceFolder}\\cmake\\toolchain.cmake"
+    }
+]
