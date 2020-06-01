@@ -94,7 +94,7 @@
                     "Unrestricted",
                     "-NoProfile",
                     "-File",
-                    "${workspaceFolder}\\clean-project.ps1"
+                    "${workspaceFolder}\\scripts\\clean-project.ps1"
                 ]
             },
             "type": "process",

@@ -13,12 +13,12 @@ set(ENV{ARM_PREFIX} "arm-none-eabi-" )
 get_filename_component(ARMCC_DIR "../stm32-utils/gcc/bin"  ABSOLUTE)
 set(TOOLCHAIN_BIN_DIR "${ARMCC_DIR}")
 
-set(CMAKE_C_COMPILER            "${ARMCC_DIR}/$ENV{ARM_PREFIX}gcc.exe" CACHE FILEPATH "C compiler")
-set(CMAKE_CXX_COMPILER          "${ARMCC_DIR}/$ENV{ARM_PREFIX}g++.exe" CACHE FILEPATH "C++ compiler")
-set(CMAKE_ASM_COMPILER          "${ARMCC_DIR}/$ENV{ARM_PREFIX}g++.exe"  CACHE FILEPATH "Assembler")
+set(CMAKE_C_COMPILER            "${ARMCC_DIR}/$ENV{ARM_PREFIX}gcc.exe")
+set(CMAKE_CXX_COMPILER          "${ARMCC_DIR}/$ENV{ARM_PREFIX}g++.exe")
+set(CMAKE_ASM_COMPILER          "${ARMCC_DIR}/$ENV{ARM_PREFIX}g++.exe")
 
-set(CMAKE_OBJCOPY               "${ARMCC_DIR}/$ENV{ARM_PREFIX}objcopy.exe" CACHE INTERNAL "objcopy tool")
-set(CMAKE_SIZE_UTIL             "${ARMCC_DIR}/$ENV{ARM_PREFIX}size.exe" CACHE INTERNAL "size tool")
+set(CMAKE_OBJCOPY               "${ARMCC_DIR}/$ENV{ARM_PREFIX}objcopy.exe")
+set(CMAKE_SIZE_UTIL             "${ARMCC_DIR}/$ENV{ARM_PREFIX}size.exe")
 
 set(CMAKE_SYSROOT "${ARMCC_DIR}/../arm-none-eabi")
 set(CMAKE_FIND_ROOT_PATH ${ARMCC_DIR})

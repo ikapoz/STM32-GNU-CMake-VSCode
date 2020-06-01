@@ -10,7 +10,7 @@
 # Precompiled Headers
 *.gch
 # Ignore CI build directory
-b[B]uild
+[bB]uild
 
 # Visual Studio files
 .vs
